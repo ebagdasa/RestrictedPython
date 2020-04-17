@@ -67,9 +67,9 @@ def _compile_restricted_mode(
                 collected_errors, collected_warnings, used_names)
             policy_instance.visit(c_ast)
             if not collected_errors:
-                byte_code = compile(c_ast, filename, mode=mode  # ,
-                                    # flags=flags,
-                                    # dont_inherit=dont_inherit
+                byte_code = compile(c_ast, filename, mode=mode,
+                                    flags=flags,
+                                    dont_inherit=dont_inherit
                                     )
     else:
         raise TypeError('Unallowed policy provided for RestrictedPython')
